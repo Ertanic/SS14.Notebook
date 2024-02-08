@@ -1,0 +1,17 @@
+.marquee {
+    position: fixed;
+    bottom: 0;
+    left: 100vw;
+
+    .marquee_inner {
+        position: relative;
+        width: 100%;
+        display: flex;
+        font-size: 1rem;
+
+        &>* {
+            white-space: nowrap;
+            padding: 0 4rem;
+        }
+    }
+}
