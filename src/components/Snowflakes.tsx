@@ -39,7 +39,6 @@ function Snowflakes({snowflakesCount}: {snowflakesCount: number}) {
     const getPosition = (offset: number, size: number) => Math.round(-1 * offset + Math.random() * (size + 2 * offset));
 
     const move = () => {
-        console.log("snowflakes moving");
         if (getEnableAnimations())
             for (let snowflake of snowflakes)
                 snowflake.update();
@@ -58,13 +57,11 @@ function Snowflakes({snowflakesCount}: {snowflakesCount: number}) {
     }
 
     const generateSnowflakes = () => {
-        console.groupCollapsed("generating snowflakes");
         snowflakesContainerRef.style.display = "block";
         for (let i = 0; i < snowflakesCount; i++) {
             let clone = snowflakeRef.cloneNode(true) as HTMLElement;
             snowflakesContainerRef.appendChild(clone);
             let initialPos = { x: getPosition(50, browserWidth), y: getPosition(50, browserHeight) };
-            console.log(initialPos);
             let speed = 5 + Math.random() * 40;
             let snowflakeObj = new Snowflake(
                 clone,
@@ -72,16 +69,12 @@ function Snowflakes({snowflakesCount}: {snowflakesCount: number}) {
                 initialPos);
             snowflakes.push(snowflakeObj);
         }
-        console.log("generated snowflakes: ", snowflakes);
-        console.groupEnd();
         snowflakesContainerRef.removeChild(snowflakeRef);
         move();
     }
 
     createEffect(() => {
-        console.log('creating effect');
         setAccessibilityState();
-        console.log(reduceMotionQuery.matches);
         reduceMotionQuery.addEventListener("change", setAccessibilityState);
         if (getEnableAnimations()) {
             window.addEventListener("DOMContentLoaded", generateSnowflakes, false);
