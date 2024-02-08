@@ -1,5 +1,11 @@
+import Snowflakes from "./components/Snowflakes";
+
 function App() {
-  return <h1>Hello, World!</h1>
+  return (
+    <>
+      <Snowflakes snowflakesCount={50} />
+    </>
+  )
 };
 
 export default App;
