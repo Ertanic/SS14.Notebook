@@ -1,0 +1,64 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "build app",
+            "cargo": {
+                "args": [
+                    "build",
+                    "--release",
+                    "--manifest-path",
+                    "./src-tauri/Cargo.toml"
+                ]
+            }
+        },
+        {
+            "command": "yarn build",
+            "name": "build ui",
+            "request": "launch",
+            "type": "node-terminal"
+        },
+        {
+            "command": "yarn dev",
+            "name": "dev ui",
+            "request": "launch",
+            "type": "node-terminal"
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "dev app",
+            "cargo": {
+                "args": [
+                    "run",
+                    "--manifest-path",
+                    "./src-tauri/Cargo.toml"
+                ]
+            }
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Bundle",
+            "cargo": {
+                "args": [
+                    "tauri",
+                    "build"
+                ]
+            }
+        }
+    ],
+    "compounds": [
+        {
+            "name": "Run",
+            "configurations": ["dev app", "dev ui"],
+            "stopAll": true
+        },
+        {
+            "name": "Build",
+            "configurations": ["build app", "build ui"]
+        }
+    ]
+}
