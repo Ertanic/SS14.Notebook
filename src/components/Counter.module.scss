@@ -14,3 +14,14 @@
         background-image: linear-gradient(to top right, #C0C0C0, #ff2400);
     }
 }
+
+.looted {
+    display: flex;
+    align-items: center;
+    color: #b7b7b7;
+
+    img {
+        width: 60px;
+        height: 60px;
+    }
+}

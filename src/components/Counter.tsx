@@ -16,6 +16,7 @@ function Counter() {
                 onClick={() => setBrokenCount(brokenCount() + 1)}>
                 {`Разбили ${brokenCount()} бокалов (Жмякни для изменения)`}
             </button>
+            <pre class={styles.looted}>Кнопочки были нагло слизаны <img src="https://polotnos.cdnbro.com/posts/30825705-smailiki-razvodiashchie-rukami-8.jpg"/></pre>
         </div>
     )
 }
