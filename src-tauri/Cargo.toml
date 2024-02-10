@@ -1,10 +1,10 @@
 [package]
 name = "ss14notebook"
-version = "0.0.0"
+version = "1.0.0"
 description = "A Tauri App"
-authors = ["you"]
-license = ""
-repository = ""
+authors = ["Ertanic", "DefectiveTh"]
+license = "MIT"
+repository = "https://github.com/Ertanic/SS14.Notebook"
 edition = "2021"
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
