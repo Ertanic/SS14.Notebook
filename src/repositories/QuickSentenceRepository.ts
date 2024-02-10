@@ -45,7 +45,7 @@ export class QuickSentenceRepository implements IRepository<QuickSentence> {
     }
 
     async Delete(id: number): Promise<QueryResult> {
-        return await this._db.execute("DELETE FROM quick_sentences WHERE quick_sentence_id = $1", [id]);
+        return await this._db.execute(`DELETE FROM ${this._tableName} WHERE quick_sentence_id = $1`, [id]);
     }
 
     async GetById(id: number): Promise<QuickSentence> {
@@ -82,7 +82,7 @@ export class QuickSentenceCategoryRepository implements IRepository<QuickSentenc
         return await this._db.execute(command);
     }
     async Delete(id: number): Promise<QueryResult> {
-        return await this._db.execute("DELETE FROM quick_sentences WHERE category_id = $1", [id]);
+        return await this._db.execute(`DELETE FROM ${this._tableName} WHERE category_id = $1`, [id]);
     }
     async Close(): Promise<void> {
         await this._db.close();
