@@ -1,3 +1,4 @@
+import QuickSentences from "./components/QuickSentences";
 import Quotes from "./components/Quotes";
 import Snowflakes from "./components/Snowflakes";
 
@@ -19,6 +20,10 @@ function App() {
         <a class="link" href="https://station14.ru/wiki/Химия" target="_tauri">Вики Химия</a>
         <a class="link" href="https://station14.ru/wiki/Медицина" target="_tauri">Вики Медицина</a>
       </header>
+
+      <main>
+        <QuickSentences/>
+      </main>
 
       <Snowflakes snowflakesCount={50} />
       <Quotes />
