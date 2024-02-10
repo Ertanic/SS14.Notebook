@@ -3,7 +3,7 @@ import IRepository from "./IRepository";
 import SQLManager, { InsertConstructor, UpdateConstructor } from "./SQL";
 
 export class QuickSentenceCategory {
-    category_id: string = undefined!;
+    category_id: number = undefined!;
     name: string;
     
     constructor(name: string) {
