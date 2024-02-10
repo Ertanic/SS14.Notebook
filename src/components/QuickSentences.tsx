@@ -1,7 +1,8 @@
-import { Show, createEffect, createSignal, onCleanup } from "solid-js";
+import { For, Show, createEffect, createSignal, onCleanup } from "solid-js";
 import { QuickSentence, QuickSentenceCategory, QuickSentenceCategoryRepository, QuickSentenceRepository } from "../repositories/QuickSentenceRepository";
 import { createStore } from "solid-js/store";
 import styles from './QuickSentences.module.scss';
+import trash_icon from '../assets/trash_icon.svg';
 
 function QuickSentences() {
     type QuickSentenceState = { categories: QuickSentenceCategory[], sentences: QuickSentence[] };
@@ -28,17 +29,25 @@ function QuickSentences() {
     });
 
     const enteredCategory = (title: string) => {
-        console.log("entered: ", title);
         const newCategory = new QuickSentenceCategory(title);
         categoriesRepo.Insert([newCategory]);
         setState('categories', (c) => [...c, newCategory]);
+    }
+
+    const deletingCategory = (id: number) => {
+        categoriesRepo.Delete(id);
+        setState('categories', c => [...c.filter(i => i.category_id !== id)]);
+
+        console.log(state);
     }
 
     return (
         <section>
             <h1>Быстрое копирование фраз</h1>
             <div class={styles.categories}>
-                { state.categories.map(c => <Category title={c.name} />) }
+                <For each={state.categories}>
+                    {item => <Category item={item} onDeleteCategory={deletingCategory} />}
+                </For>
             </div>
             <AddCategory onEnterCategory={enteredCategory} />
         </section>
@@ -46,13 +55,20 @@ function QuickSentences() {
 }
 
 // TODO: Add button for new sentence
-// TODO: Add delete button
 type AddingSentenceHandler = () => void;
-type CategoryProps = { title: string, onAddSentence?: AddingSentenceHandler }
+type DeletingCategoriesHandler = (category_id: number) => void;
+type CategoryProps = { item: QuickSentenceCategory, onAddSentence?: AddingSentenceHandler, onDeleteCategory?: DeletingCategoriesHandler };
 function Category(props: CategoryProps) {
+    const clickedTrashButton = () => {
+        if (props.onDeleteCategory) props.onDeleteCategory(props.item.category_id);
+    };
+
     return (
         <div class={styles.category}>
-            <h2>{props.title}</h2>
+            <div class={styles.category_title}>
+                <h2>{props.item.name}</h2>
+                <div class={styles.trash_icon} onClick={clickedTrashButton}><img src={trash_icon} /></div>
+            </div>
         </div>
     )
 }

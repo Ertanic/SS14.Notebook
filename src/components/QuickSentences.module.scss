@@ -26,9 +26,37 @@
         width: 100%;
         padding: 5px;
         margin: 10px 0;
-        border-bottom: 2px solid #b7b7b7;
+        
         display: flex;
         justify-content: center;
+
+        .category_title {
+            position: relative;
+            display: flex;
+            justify-content: center;
+            padding: 5px;
+            width: 100%;
+            border-bottom: 2px solid #b7b7b7;
+
+            &:hover {
+                .trash_icon {
+                    opacity: 100%;
+                }
+            }
+
+            .trash_icon {
+                transition: linear .1s opacity;
+                opacity: 0;
+                position: absolute;
+                right: 0;
+                cursor: pointer;
+
+                img {
+                    width: 24px;
+                    height: 24px;
+                }
+            }
+        }
     }
 }
 
