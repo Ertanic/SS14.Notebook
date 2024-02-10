@@ -34,7 +34,7 @@
         "removeDir": false,
         "removeFile": false,
         "renameFile": false,
-        "scope": ["$RESOURCE/*"],
+        "scope": ["$RESOURCE/**"],
         "writeFile": false
       }
     },
@@ -50,7 +50,9 @@
         "icons/icon.ico"
       ],
       "resources": [
-        "data/*"
+        "data/*",
+        "data/databases/*",
+        "data/databases/sql/*"
       ]
     },
     "security": {

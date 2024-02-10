@@ -13,7 +13,8 @@
   "license": "MIT",
   "dependencies": {
     "@tauri-apps/api": "^1.5.2",
-    "solid-js": "^1.7.8"
+    "solid-js": "^1.7.8",
+    "tauri-plugin-sql-api": "https://github.com/tauri-apps/tauri-plugin-sql#v1"
   },
   "devDependencies": {
     "@tauri-apps/cli": "^1.5.8",

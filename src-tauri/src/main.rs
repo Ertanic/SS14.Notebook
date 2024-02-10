@@ -8,6 +8,7 @@ use commands::*;
 
 fn main() {
     tauri::Builder::default()
+        .plugin(tauri_plugin_sql::Builder::default().build())
         .invoke_handler(generate_handler![read_quotes])
         .run(tauri::generate_context!())
         .expect("error while running tauri application");
