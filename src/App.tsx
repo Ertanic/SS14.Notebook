@@ -1,3 +1,4 @@
+import Counter from "./components/Counter";
 import QuickSentences from "./components/QuickSentences";
 import Quotes from "./components/Quotes";
 import Snowflakes from "./components/Snowflakes";
@@ -23,6 +24,9 @@ function App() {
 
       <main>
         <QuickSentences/>
+        <section>
+          <Counter/>
+        </section>
       </main>
 
       <Snowflakes snowflakesCount={50} />

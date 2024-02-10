@@ -144,6 +144,7 @@
         .category_buttons {
             display: flex;
             flex-direction: row;
+            flex-wrap: wrap;
             padding: 10px {
                 bottom: 0;
             }
@@ -155,7 +156,7 @@
                 line-height: 2;
                 cursor: pointer;
                 border-radius: 10px;
-                width: 220px;
+                width: 200px;
                 height: 50px;
                 border: none;
                 outline: none;

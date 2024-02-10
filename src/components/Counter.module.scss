@@ -1,0 +1,16 @@
+.button {
+    font-size: 18px;
+    position: flex;
+    border: 2px solid black;
+    border-radius: 10px;
+    padding: 7px 24px;
+    background-color: #ffe500;
+    background-image: linear-gradient(to top right, #C0C0C0, #ff7518);
+    font-weight: 750;
+    margin: 15px;
+
+    &:hover {
+        background-color: #ffd333;
+        background-image: linear-gradient(to top right, #C0C0C0, #ff2400);
+    }
+}
