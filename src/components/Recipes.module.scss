@@ -1,0 +1,29 @@
+.recipe_container {
+    zoom: 1.25;
+
+    .recipe_input,
+    .recipe_input+button {
+        font-size: 18px;
+        padding: 5px;
+        outline: none;
+        background: linear-gradient(150deg, #ffffff, #cccccc);
+        border-radius: 5px;
+        box-shadow: 0.4em 0.4em 5px rgba(122, 122, 122, 0.75);
+    }
+
+    .recipe_input {
+        border-right: none;
+        border-top-right-radius: 0;
+        border-bottom-right-radius: 0;
+
+        &+button {
+            border-left: none;
+            border-top-left-radius: 0;
+            border-bottom-left-radius: 0;
+            cursor: pointer;
+        }
+    }
+
+
+    .recipe_details {}
+}

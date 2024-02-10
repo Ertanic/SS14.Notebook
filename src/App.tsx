@@ -1,6 +1,7 @@
 import Counter from "./components/Counter";
 import QuickSentences from "./components/QuickSentences";
 import Quotes from "./components/Quotes";
+import Recipes from "./components/Recipes";
 import Snowflakes from "./components/Snowflakes";
 
 function App() {
@@ -26,6 +27,7 @@ function App() {
         <QuickSentences/>
         <section>
           <Counter/>
+          <Recipes/>
         </section>
       </main>
 
