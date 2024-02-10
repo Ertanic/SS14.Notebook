@@ -1,10 +1,10 @@
 [package]
 name = "ss14notebook"
-version = "0.0.0"
+version = "1.0.0"
 description = "A Tauri App"
-authors = ["you"]
-license = ""
-repository = ""
+authors = ["Ertanic", "DefectiveTh"]
+license = "MIT"
+repository = "https://github.com/Ertanic/SS14.Notebook"
 edition = "2021"
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
@@ -13,9 +13,15 @@ edition = "2021"
 tauri-build = { version = "1.5", features = [] }
 
 [dependencies]
-tauri = { version = "1.5", features = ["shell-open"] }
+toml = { version = "0.8.10" }
+tauri = { version = "1.5", features = ["shell-open", "fs-read-file", "path-all", "clipboard-write-text"] }
 serde = { version = "1.0", features = ["derive"] }
 serde_json = "1.0"
+
+[dependencies.tauri-plugin-sql]
+git = "https://github.com/tauri-apps/plugins-workspace"
+branch = "v1"
+features = ["sqlite"]
 
 [features]
 # this feature is used for production builds or when `devPath` points to the filesystem

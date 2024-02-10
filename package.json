@@ -12,13 +12,16 @@
   },
   "license": "MIT",
   "dependencies": {
+    "@lutaok/solid-modal": "^0.1.1",
+    "@tauri-apps/api": "^1.5.2",
     "solid-js": "^1.7.8",
-    "@tauri-apps/api": "^1.5.2"
+    "tauri-plugin-sql-api": "https://github.com/tauri-apps/tauri-plugin-sql#v1"
   },
   "devDependencies": {
+    "@tauri-apps/cli": "^1.5.8",
+    "sass": "^1.70.0",
     "typescript": "^5.0.2",
     "vite": "^5.0.0",
-    "vite-plugin-solid": "^2.8.0",
-    "@tauri-apps/cli": "^1.5.8"
+    "vite-plugin-solid": "^2.8.0"
   }
 }

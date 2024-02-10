@@ -32,9 +32,10 @@
             "name": "dev app",
             "cargo": {
                 "args": [
-                    "run",
+                    "build",
                     "--manifest-path",
-                    "./src-tauri/Cargo.toml"
+                    "./src-tauri/Cargo.toml",
+                    "--no-default-features"
                 ]
             }
         },
