@@ -6,7 +6,7 @@ on:
   workflow_dispatch:
 
 env:
-  APP_NAME: "Sample Desktop App"
+  APP_NAME: "SS14.Notebook"
 
 jobs:
   release:
