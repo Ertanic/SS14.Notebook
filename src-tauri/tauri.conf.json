@@ -60,6 +60,9 @@
         },
         "nsis": {
           "languages": ["Russian"]
+        },
+        "wix": {
+          "language": "ru-RU"
         }
       }
     },
