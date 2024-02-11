@@ -60,6 +60,9 @@
           "silent": true,
           "type": "embedBootstrapper"
         },
+        "nsis": {
+          "installerIcon": "icons/icon.ico"
+        },
         "wix": {
           "language": "ru-RU"
         }
