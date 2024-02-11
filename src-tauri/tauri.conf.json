@@ -40,7 +40,7 @@
     },
     "bundle": {
       "active": true,
-      "targets": "all",
+      "targets": ["deb", "app", "appimage", "dmg", "nsis"],
       "identifier": "ru.ss14notebook.app",
       "icon": [
         "icons/32x32.png",
