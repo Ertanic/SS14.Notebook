@@ -7,16 +7,19 @@
   },
   "package": {
     "productName": "SS14Notebook",
-    "version": "0.2.0"
+    "version": "0.2.1"
   },
   "tauri": {
     "updater": {
       "active": true,
       "dialog": true,
-      "pubkey": "dW50cnVzdGVkIGNvbW1lbnQ6IG1pbmlzaWduIHB1YmxpYyBrZXk6IEE3Q0E1RDc0OEI2NTUzM0YKUldRL1UyV0xkRjNLcDMxa0xETnQyK0xEdVV0eWM3ay9qUFU2MkZSajNoY3k3NlpFQVJRU3lZYkwK",
+      "pubkey": "dW50cnVzdGVkIGNvbW1lbnQ6IG1pbmlzaWduIHB1YmxpYyBrZXk6IDk3Q0Y1NTg3ODlCRDFEM0EKUldRNkhiMkpoMVhQbC9MU2NKQ3JnRktIQ0tWUUJ2TlZhaWFWTjJrR2lnZGpIZjhhWFQ5MVVnVGEK",
       "windows": {
         "installMode": "passive"
-      }
+      },
+      "endpoints": [
+        "https://gist.github.com/Ertanic/fd413fd9f20dd2be53204b9f154a0643"
+      ]
     },
     "allowlist": {
       "all": false,
