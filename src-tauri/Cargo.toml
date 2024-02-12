@@ -1,7 +1,6 @@
 [package]
 name = "ss14notebook"
-version = "0.0.0"
-description = "A Tauri App"
+version = "1.0.0"
 authors = ["Ertanic", "DefectiveTh"]
 license = "MIT"
 repository = "https://github.com/Ertanic/SS14.Notebook"
