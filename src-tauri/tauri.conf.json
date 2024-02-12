@@ -7,7 +7,7 @@
   },
   "package": {
     "productName": "SS14Notebook",
-    "version": "0.2.1"
+    "version": "0.2.2"
   },
   "tauri": {
     "updater": {
@@ -18,7 +18,7 @@
         "installMode": "passive"
       },
       "endpoints": [
-        "https://gist.github.com/Ertanic/fd413fd9f20dd2be53204b9f154a0643"
+        "https://gist.githubusercontent.com/Ertanic/fd413fd9f20dd2be53204b9f154a0643/raw/"
       ]
     },
     "allowlist": {
