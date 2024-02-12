@@ -7,7 +7,7 @@ on:
   workflow_dispatch:
 
 jobs:
-  release:
+  pre-release:
     permissions:
       contents: write
     strategy:
@@ -49,8 +49,8 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
-          tagName: pre-${{ github.ref_name }} # This only works if your workflow triggers on new tags.
-          releaseName: 'SS14.Notebook-pre-v__VERSION__' # tauri-action replaces \_\_VERSION\_\_ with the app version.
+          tagName: pre-v__VERSION__
+          releaseName: 'SS14.Notebook-pre-v__VERSION__'
           releaseBody: 'See the assets to download and install this version.'
           releaseDraft: true
           prerelease: true
