@@ -83,19 +83,19 @@ function QuickSentences() {
             </div>
             <AddCategory onEnterCategory={enteredCategory} />
 
-            <Modal contentClass={styles.modal} overlayClass={styles.overlay} closeOnOutsideClick isOpen={isOpenModal()} onCloseRequest={() => setIsOpenModal(false)}>
+            <Modal contentClass="modal" overlayClass="overlay" closeOnOutsideClick isOpen={isOpenModal()} onCloseRequest={() => setIsOpenModal(false)}>
                 <form onSubmit={addingSentence}>
-                    <div class={styles.modal__form_row}>
-                        <div class={styles.modal__form_column}>
+                    <div class="modal__form_row">
+                        <div class="modal__form_column">
                             <label for="sentence_title">Название</label>
                             <label for="sentence_content">Фраза</label>
                         </div>
-                        <div class={styles.modal__form_column}>
+                        <div class="modal__form_column">
                             <input type="text" maxlength={30} id="sentence_title" name="title" />
                             <textarea wrap="hard" name="sentence" id="sentence_content" rows={5} />
                         </div>
                     </div>
-                    <button class={styles.check_button} type="submit"><img src={check_icon} /></button>
+                    <button class="check_button" type="submit"><img src={check_icon} /></button>
                 </form>
             </Modal>
         </section>

@@ -6,8 +6,8 @@
     "distDir": "../dist"
   },
   "package": {
-    "productName": "SS14Notebook",
-    "version": "0.2.2"
+    "productName": "SS14.Notebook",
+    "version": "0.2.3"
   },
   "tauri": {
     "updater": {

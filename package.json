@@ -1,5 +1,6 @@
 {
   "name": "ss14notebook",
+  "version": "0.2.3",
   "description": "",
   "type": "module",
   "scripts": {
